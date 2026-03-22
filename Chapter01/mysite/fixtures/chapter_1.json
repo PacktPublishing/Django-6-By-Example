@@ -1,0 +1,47 @@
+[
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "Who was Django Reinhardt?",
+            "slug": "who-was-django-reinhardt",
+            "author": [
+                "admin"
+            ],
+            "body": "Jean Reinhardt, known to all by his Romani nickname Django, was a Belgian-born Romani-French jazz guitarist and composer. He was the first major jazz talent to emerge from Europe and remains the most significant.",
+            "publish": "2026-03-15T16:57:28Z",
+            "created": "2026-03-15T17:03:17.991Z",
+            "updated": "2026-03-15T20:42:28.391Z",
+            "status": "PB"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "New title",
+            "slug": "another-post",
+            "author": [
+                "admin"
+            ],
+            "body": "Post body.",
+            "publish": "2026-03-15T17:26:13.784Z",
+            "created": "2026-03-15T17:26:17.048Z",
+            "updated": "2026-03-15T17:28:14.316Z",
+            "status": "DF"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "One more post",
+            "slug": "one-more-post",
+            "author": [
+                "admin"
+            ],
+            "body": "Post body.",
+            "publish": "2026-03-15T17:26:20.714Z",
+            "created": "2026-03-15T17:26:20.714Z",
+            "updated": "2026-03-15T17:26:20.714Z",
+            "status": "DF"
+        }
+    }
+]
