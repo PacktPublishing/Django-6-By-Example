@@ -1,0 +1,92 @@
+[
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "Another post",
+            "slug": "another-post",
+            "author": [
+                "admin"
+            ],
+            "body": "Post body.",
+            "publish": "2026-03-15T16:36:13.784Z",
+            "created": "2026-03-15T16:26:17.048Z",
+            "updated": "2026-03-15T17:28:14.316Z",
+            "status": "PB"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "Who was Django Reinhardt?",
+            "slug": "who-was-django-reinhardt",
+            "author": [
+                "admin"
+            ],
+            "body": "Jean Reinhardt, known to all by his Romani nickname Django, was a Belgian-born Romani-French jazz guitarist and composer. He was the first major jazz talent to emerge from Europe and remains the most significant.",
+            "publish": "2026-03-15T16:57:28Z",
+            "created": "2026-03-15T16:03:17.991Z",
+            "updated": "2026-03-15T20:42:28.391Z",
+            "status": "PB"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "New title",
+            "slug": "new-title",
+            "author": [
+                "admin"
+            ],
+            "body": "Post body.",
+            "publish": "2026-03-15T17:26:13.784Z",
+            "created": "2026-03-15T17:26:12.048Z",
+            "updated": "2026-03-15T17:28:14.316Z",
+            "status": "DF"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "One more post",
+            "slug": "one-more-post",
+            "author": [
+                "admin"
+            ],
+            "body": "Post body.",
+            "publish": "2026-03-15T17:26:20.714Z",
+            "created": "2026-03-15T17:26:20.714Z",
+            "updated": "2026-03-15T17:26:20.714Z",
+            "status": "DF"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "Who was Miles Davis",
+            "slug": "who-was-miles-davis",
+            "author": [
+                "admin"
+            ],
+            "body": "Miles Davis was an American trumpeter, bandleader, and composer. He is among the most influential and acclaimed figures in the history of jazz and 20th-century music.",
+            "publish": "2026-03-24T21:54:24Z",
+            "created": "2026-03-24T21:54:39.712Z",
+            "updated": "2026-03-24T21:58:06.446Z",
+            "status": "PB"
+        }
+    },
+    {
+        "model": "blog.post",
+        "fields": {
+            "title": "Notes on Duke Ellington",
+            "slug": "notes-on-duke-ellington",
+            "author": [
+                "admin"
+            ],
+            "body": "Edward Kennedy \"Duke\" Ellington was an American composer, pianist, and leader of a jazz orchestra, which he led from 1923 untill his death over a career spanning more than half a century.",
+            "publish": "2026-03-24T21:54:44Z",
+            "created": "2026-03-24T21:54:55.365Z",
+            "updated": "2026-03-24T22:01:55.777Z",
+            "status": "PB"
+        }
+    }
+]
