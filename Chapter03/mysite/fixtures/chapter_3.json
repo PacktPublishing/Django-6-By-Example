@@ -1,0 +1,276 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$UcJ2XGXN3rlOQqG3zbJJCk$uLyUodhSdwKOZ2eKdauYbBXVHp2xFYcCrOdSW0+vT6k=",
+    "last_login": "2026-04-23T20:43:06.685Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-15T16:34:39.852Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "taggit.tag",
+  "fields": {
+    "name": "music",
+    "slug": "music"
+  }
+},
+{
+  "model": "taggit.tag",
+  "fields": {
+    "name": "jazz",
+    "slug": "jazz"
+  }
+},
+{
+  "model": "taggit.tag",
+  "fields": {
+    "name": "django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "fields": {
+    "name": "markdown",
+    "slug": "markdown"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "fields": {
+    "tag": [
+      "music"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "fields": {
+    "tag": [
+      "jazz"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "fields": {
+    "tag": [
+      "jazz"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "fields": {
+    "tag": [
+      "music"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "fields": {
+    "tag": [
+      "jazz"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "fields": {
+    "tag": [
+      "markdown"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": 7
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Who was Django Reinhardt?",
+    "slug": "who-was-django-reinhardt",
+    "author": [
+      "admin"
+    ],
+    "body": "Jean Reinhardt, known to all by his Romani nickname Django, was a Belgian-born Romani-French jazz guitarist and composer. He was the first major jazz talent to emerge from Europe and remains the most significant.",
+    "publish": "2026-03-15T16:57:28Z",
+    "created": "2026-03-15T16:03:17.991Z",
+    "updated": "2026-03-15T20:42:28.391Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Another post",
+    "slug": "another-post",
+    "author": [
+      "admin"
+    ],
+    "body": "Post body.",
+    "publish": "2026-03-15T17:16:13.784Z",
+    "created": "2026-03-15T17:06:17.048Z",
+    "updated": "2026-03-15T17:28:14.316Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "New title",
+    "slug": "new-title",
+    "author": [
+      "admin"
+    ],
+    "body": "Post body.",
+    "publish": "2026-03-15T17:26:13.784Z",
+    "created": "2026-03-15T17:26:12.048Z",
+    "updated": "2026-03-15T17:28:14.316Z",
+    "status": "DF"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "One more post",
+    "slug": "one-more-post",
+    "author": [
+      "admin"
+    ],
+    "body": "Post body.",
+    "publish": "2026-03-15T17:26:20.714Z",
+    "created": "2026-03-15T17:26:20.714Z",
+    "updated": "2026-03-15T17:26:20.714Z",
+    "status": "DF"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Who was Miles Davis",
+    "slug": "who-was-miles-davis",
+    "author": [
+      "admin"
+    ],
+    "body": "Miles Davis was an American trumpeter, bandleader, and composer. He is among the most influential and acclaimed figures in the history of jazz and 20th-century music.",
+    "publish": "2026-03-24T21:54:24Z",
+    "created": "2026-03-24T21:54:39.712Z",
+    "updated": "2026-04-23T21:21:01.223Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "Notes on Duke Ellington",
+    "slug": "notes-on-duke-ellington",
+    "author": [
+      "admin"
+    ],
+    "body": "Edward Kennedy \"Duke\" Ellington was an American composer, pianist, and leader of a jazz orchestra, which he led from 1923 untill his death over a career spanning more than half a century.",
+    "publish": "2026-03-24T21:54:44Z",
+    "created": "2026-03-24T21:54:55.365Z",
+    "updated": "2026-04-23T21:21:16.939Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Markdown post",
+    "slug": "markdown-post",
+    "author": [
+      "admin"
+    ],
+    "body": "This is a post formatted with markdown\r\n--------------------------------------\r\n\r\n*This is emphasized* and **this is more emphasized**.\r\n\r\nHere is a list:\r\n\r\n* One\r\n* Two\r\n* Three\r\n\r\nAnd a [link to the Django website](https://www.djangoproject.com/).",
+    "publish": "2026-04-23T22:03:29Z",
+    "created": "2026-04-23T22:04:30.658Z",
+    "updated": "2026-04-23T22:04:30.658Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 1,
+  "fields": {
+    "post": 6,
+    "name": "testing",
+    "email": "testing@gmail.com",
+    "body": "testing",
+    "created": "2026-04-07T21:27:51.379Z",
+    "updated": "2026-04-07T21:32:25.737Z",
+    "active": false
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 2,
+  "fields": {
+    "post": 6,
+    "name": "user 2",
+    "email": "email@test.com",
+    "body": "other",
+    "created": "2026-04-07T21:29:34.961Z",
+    "updated": "2026-04-07T21:29:34.961Z",
+    "active": true
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 3,
+  "fields": {
+    "post": 6,
+    "name": "testing",
+    "email": "testing@gmail.com",
+    "body": "testing",
+    "created": "2026-04-25T11:52:48.520Z",
+    "updated": "2026-04-25T11:52:48.520Z",
+    "active": true
+  }
+}
+]
