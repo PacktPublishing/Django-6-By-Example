@@ -1,6 +1,6 @@
 # Django-6-By-Example
 
-This is the code repository for Django 6 by Example, written by [Antonio Melé](https://github.com/PacktPublishing/Django-5-By-Example/tree/main#:~:text=%2C%20written%20by-,Antonio%20Mel%C3%A9,-and%20published%20by) and published by [Packt](). It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for Django 6 by Example, written by [Antonio Melé](https://antoniomele.es/) and published by [Packt](). It contains all the supporting project files necessary to work through the book from start to finish.
 
 
 ## Instructions
@@ -53,6 +53,8 @@ python manage.py loaddata fixtures/chapter_1.json
 ```
 
 Docker Compose is explained in Chapter 17. However all chapters include a Docker Compose configuration and a management script (contribution by [@marksweb](https://github.com/marksweb)).
+
+Make sure you run these commands from the chapter directory (e.g. Chapter01) where the do.sh script is located.
 
 Commands to build and run using Docker Compose:
 ```sh
