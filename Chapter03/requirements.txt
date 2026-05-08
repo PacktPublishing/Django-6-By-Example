@@ -1,5 +1,5 @@
 asgiref==3.11.1
-Django==6.0.3
+Django==6.0.4
 sqlparse==0.5.5
 python-decouple==3.8
 ipython==9.11.0
