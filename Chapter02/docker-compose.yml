@@ -2,7 +2,7 @@ services:
   web:
     build: .
     env_file:
-      - ../.env
+      - .env
   web_migrate:
     extends:
       service: web
