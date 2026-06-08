@@ -46,10 +46,13 @@ INSTALLED_APPS = [
     "django_extensions",
     "easy_thumbnails",
     "social_django",
+    "debug_toolbar",
     "images.apps.ImagesConfig",
+    "actions.apps.ActionsConfig",
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -161,4 +164,10 @@ SOCIAL_AUTH_PIPELINE = [
     "social_core.pipeline.social_auth.associate_user",
     "social_core.pipeline.social_auth.load_extra_data",
     "social_core.pipeline.user.user_details",
+]
+
+# Django Debug Toolbar
+
+INTERNAL_IPS = [
+    '127.0.0.1',
 ]
