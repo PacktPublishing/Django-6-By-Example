@@ -6,6 +6,7 @@ easy-thumbnails==2.10.1
 Pillow~=11.3.0
 python-decouple==3.8
 pyOpenSSL==26.2.0
+redis==8.0.0
 requests==2.34.2
 social-auth-app-django==5.9.0
 sqlparse==0.5.5
