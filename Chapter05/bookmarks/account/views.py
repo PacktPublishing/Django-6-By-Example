@@ -8,7 +8,6 @@ from .forms import LoginForm, ProfileEditForm, UserEditForm, UserRegistrationFor
 from .models import Profile
 
 
-from .models import Profile
 
 
 def user_login(request):
