@@ -8,8 +8,6 @@ from .forms import LoginForm, ProfileEditForm, UserEditForm, UserRegistrationFor
 from .models import Profile
 
 
-
-
 def user_login(request):
     if request.method == "POST":
         form = LoginForm(request.POST)
