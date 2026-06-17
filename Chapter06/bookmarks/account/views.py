@@ -3,7 +3,9 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
+
 from .forms import LoginForm, ProfileEditForm, UserEditForm, UserRegistrationForm
+from .models import Profile
 
 
 from .models import Profile
