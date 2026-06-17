@@ -68,7 +68,7 @@ input, textarea {
     padding:6px 10px;
     font-size:12px;
 }
-input[type=submit] {
+input[type=submit], .submit-button {
     font-weight:bold;
     background:#00abff;
     color:#fff;
