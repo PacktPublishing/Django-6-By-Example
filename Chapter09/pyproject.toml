@@ -12,6 +12,7 @@ dependencies = [
     "flower==2.0.1",
     "stripe==15.3.0",
     "python-decouple>=3.8",
+    "weasyprint==69.0",
 ]
 
 [tool.ruff.format]
