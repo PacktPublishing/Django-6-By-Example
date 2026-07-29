@@ -1,0 +1,70 @@
+[
+  {
+    "model": "shop.category",
+    "pk": 1,
+    "fields": {
+      "name": "tea",
+      "slug": "tea"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Green tea",
+      "slug": "green-tea",
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "30.00",
+      "available": true,
+      "created": "2026-06-29T17:27:29.118Z",
+      "updated": "2026-07-03T19:29:12.744Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Red tea",
+      "slug": "red-tea",
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "45.50",
+      "available": true,
+      "created": "2026-06-29T17:28:28.865Z",
+      "updated": "2026-07-03T19:31:58.070Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "Black tea",
+      "slug": "black-tea",
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "40.00",
+      "available": true,
+      "created": "2026-06-29T17:28:58.534Z",
+      "updated": "2026-06-29T17:28:58.534Z"
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "Tea powder",
+      "slug": "tea-powder",
+      "image": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "price": "21.00",
+      "available": true,
+      "created": "2026-06-29T17:28:58.534Z",
+      "updated": "2026-06-29T17:28:58.534Z"
+    }
+  }
+]
