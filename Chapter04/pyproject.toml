@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
     "asgiref==3.11.1",
     "django==6.0.6",
-    "pillow==11.3",
+    "pillow==12.3.0",
     "sqlparse==0.5.5",
 ]
 
