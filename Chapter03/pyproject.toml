@@ -5,7 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
     "asgiref==3.11.1",
     "django==6.0.6",
-    "sqlparse==0.5.5",
+    "sqlparse==0.6.0",
     "python-decouple==3.8",
     "ipython==9.11.0",
     "django-taggit==6.1.0",
