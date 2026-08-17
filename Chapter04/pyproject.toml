@@ -6,7 +6,7 @@ dependencies = [
     "asgiref==3.11.1",
     "Django==6.0.5",
     "pillow==12.3.0",
-    "sqlparse==0.5.5",
+    "sqlparse==0.6.0",
 ]
 
 [tool.ruff.format]
