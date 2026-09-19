@@ -8,5 +8,5 @@ pymemcache==4.0.0
 django-debug-toolbar==7.0.0
 redis==8.0.0
 django-redisboard==9.0.0
-djangorestframework==3.17.1
+djangorestframework==3.18.1
 requests==2.34.2
