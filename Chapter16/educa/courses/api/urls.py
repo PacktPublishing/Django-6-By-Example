@@ -3,7 +3,7 @@ from rest_framework import routers
 
 from . import views
 
-app_name = "courses"
+app_name = "courses_api"
 
 router = routers.DefaultRouter()
 router.register("courses", views.CourseViewSet)
