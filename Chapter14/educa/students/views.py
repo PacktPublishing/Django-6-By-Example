@@ -57,7 +57,7 @@ class StudentCourseDetailView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         # get course object
-        course = self.get_object()
+        course = self.object
         if "module_id" in self.kwargs:
             # get current module
             context["module"] = course.modules.get(id=self.kwargs["module_id"])
