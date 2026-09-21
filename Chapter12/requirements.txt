@@ -1,4 +1,4 @@
 asgiref~=3.11.1
-Django~=6.0.6
+Django~=6.0.8
 sqlparse==0.6.0
 Pillow~=12.3.0
