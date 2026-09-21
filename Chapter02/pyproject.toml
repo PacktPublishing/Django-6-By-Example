@@ -4,7 +4,7 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     "asgiref==3.11.1",
-    "django==6.0.5",
+    "django==6.0.8",
     "sqlparse==0.6.0",
     "python-decouple==3.8",
     "ipython==9.11.0",
