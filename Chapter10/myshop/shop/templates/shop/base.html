@@ -1,0 +1,22 @@
+{% load static django_htmx %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}My shop{% endblock %}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    {% htmx_script %}
+  </head>
+  <body hx-headers='{"x-csrftoken": "{{ csrf_token }}"}'>
+    <div id="header">
+      <a href="/" class="logo">My shop</a>
+    </div>
+    <div id="subheader">
+      {% include "shop/cart_summary.html" %}
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
