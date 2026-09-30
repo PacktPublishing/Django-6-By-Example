@@ -1,0 +1,17 @@
+{% load i18n %}
+<div class="cart" id="cart-summary" hx-swap-oob="true">
+  {% with total_items=cart|length %}
+    {% if total_items > 0 %}
+      {% translate "Your cart" %}:
+      <a href="{% url 'cart:cart_detail' %}">
+        {% blocktranslate with total=cart.get_total_price count items=total_items %} 
+          {{ items }} item, ${{ total }}
+        {% plural %} 
+          {{ items }} items,  ${{ total }}
+        {% endblocktranslate %}
+      </a>
+    {% elif not order %}
+      {% translate "Your cart is empty." %} 
+    {% endif %}
+  {% endwith %}
+</div>
