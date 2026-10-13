@@ -32,6 +32,8 @@ def stripe_webhook(request):
                 order = Order.objects.get(id=session.client_reference_id)
             except Order.DoesNotExist:
                 return HttpResponse(status=404)
+            if order.paid:
+                return HttpResponse(status=200)
             # mark order as paid
             order.paid = True
             # store Stripe payment ID

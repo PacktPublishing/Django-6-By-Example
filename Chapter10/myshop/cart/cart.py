@@ -78,8 +78,9 @@ class Cart:
             self.save()
 
     def clear(self):
-        # remove cart from session
+        # remove cart and applied coupon from session
         del self.session[settings.CART_SESSION_ID]
+        self.session.pop("coupon_id", None)
         self.save()
 
     def get_total_price(self):
