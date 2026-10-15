@@ -13,7 +13,7 @@ dependencies = [
     "stripe==15.3.0",
     "python-decouple>=3.8",
     "weasyprint==69.0",
-    "django-htmx>=1.28.0",
+    "django~=6.0.8",
     "redis==8.0.0",
 ]
 
