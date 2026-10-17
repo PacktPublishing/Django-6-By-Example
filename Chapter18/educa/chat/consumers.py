@@ -11,7 +11,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         self.user = self.scope["user"]
         self.id = self.scope["url_route"]["kwargs"]["course_id"]
         self.room_group_name = f"chat_{self.id}"
-        
+
         if not self.user.is_authenticated or not await self.is_enrolled():
             await self.close()
             return
@@ -23,6 +23,10 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def disconnect(self, close_code):
         # leave room group
         await self.channel_layer.group_discard(self.room_group_name, self.channel_name)
+
+    # check the user is a student of the course
+    async def is_enrolled(self):
+        return await self.user.courses_joined.filter(id=self.id).aexists()
 
     # persist message to database
     async def persist_message(self, message):
