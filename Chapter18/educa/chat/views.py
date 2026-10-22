@@ -7,7 +7,7 @@ from courses.models import Course
 
 @login_required
 def course_chat_room(request, course_id):
-    # retrieve course with given id owned or joined by the current user, or 404 if neither
+    # retrieve course with given id owned or joined by the current user, or 404
     course = get_object_or_404(
         Course.objects.filter(
             Q(owner=request.user) | Q(students=request.user)

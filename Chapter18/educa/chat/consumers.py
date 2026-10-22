@@ -43,6 +43,8 @@ class ChatConsumer(AsyncWebsocketConsumer):
         text_data_json = json.loads(text_data)
         message = text_data_json["message"]
         now = timezone.now()
+        # persist message
+        await self.persist_message(message)
         # send message to room group
         await self.channel_layer.group_send(
             self.room_group_name,
@@ -53,8 +55,6 @@ class ChatConsumer(AsyncWebsocketConsumer):
                 "datetime": now.isoformat(),
             },
         )
-        # persist message
-        await self.persist_message(message)
 
     # receive message from room group
     async def chat_message(self, event):
