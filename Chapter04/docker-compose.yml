@@ -1,6 +1,8 @@
 services:
   web:
     build: .
+    volumes:
+      - .:/code
   web_migrate:
     extends:
       service: web
@@ -16,5 +18,3 @@ services:
     environment:
       PYTHONPATH: "/code/bookmarks"
       DJANGO_SETTINGS_MODULE: "bookmarks.settings"
-    volumes:
-      - ./:/code
