@@ -7,6 +7,6 @@ dependencies = [
     "celery==5.6.3",
     "django~=6.0.9",
     "flower==2.0.1",
-    "pillow~=12.3.0",
+    "pillow~=13.0.0",
     "sqlparse==0.6.0",
 ]
