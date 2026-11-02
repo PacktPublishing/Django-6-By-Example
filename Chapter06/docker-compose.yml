@@ -1,0 +1,20 @@
+services:
+  web:
+    build: .
+    volumes:
+      - .:/code
+  web_migrate:
+    extends:
+      service: web
+    command: python /code/bookmarks/manage.py migrate
+  web_run:
+    extends:
+      service: web
+    command: python /code/bookmarks/manage.py runserver_plus 0.0.0.0:8000 --cert-file /code/bookmarks/cert.crt
+    ports:
+      - "8000:8000"
+    depends_on:
+      - web_migrate
+    environment:
+      PYTHONPATH: "/code/bookmarks"
+      DJANGO_SETTINGS_MODULE: "bookmarks.settings"
