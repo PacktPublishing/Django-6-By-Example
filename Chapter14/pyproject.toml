@@ -9,7 +9,7 @@ dependencies = [
     "django-debug-toolbar==7.0.0",
     "django-embed-video==1.4.10",
     "django-redisboard==9.0.0",
-    "pillow~=12.3.0",
+    "pillow~=13.0.0",
     "pymemcache==4.0.0",
     "redis==8.0.0",
     "sqlparse==0.6.0",
