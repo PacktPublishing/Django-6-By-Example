@@ -11,7 +11,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 COPY requirements.txt .
+
 RUN python -m pip install -r requirements.txt
-RUN python -m pip install psycopg[binary]
 
 COPY . .
