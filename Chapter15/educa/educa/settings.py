@@ -145,6 +145,9 @@ CACHES = {
     }
 }
 
+# Uncomment when running with docker compose (Redis is the "cache" service)
+# CACHES["default"]["LOCATION"] = "redis://cache:6379"
+
 
 CACHE_MIDDLEWARE_ALIAS = "default"
 CACHE_MIDDLEWARE_SECONDS = 60 * 15  # 15 minutes
