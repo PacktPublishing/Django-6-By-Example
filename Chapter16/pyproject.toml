@@ -1,0 +1,20 @@
+[project]
+name = "Django-6-By-Example"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "asgiref~=3.11.1",
+    "django~=6.0.9",
+    "django-braces==1.17.0",
+    "django-debug-toolbar==7.0.0",
+    "django-embed-video==1.4.10",
+    "django-redisboard==9.0.0",
+    "djangorestframework==3.18.2",
+    "pillow~=12.3.0",
+    "pymemcache==4.0.0",
+    "pytest~=9.1.1",
+    "pytest-django~=4.14.0",
+    "redis==8.0.0",
+    "requests==2.34.2",
+    "sqlparse==0.6.0",
+]
