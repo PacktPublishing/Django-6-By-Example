@@ -11,7 +11,7 @@ dependencies = [
     "django-debug-toolbar==7.0.0",
     "django-embed-video==1.4.10",
     "django-redisboard==9.0.0",
-    "djangorestframework==3.18.1",
+    "djangorestframework==3.18.2",
     "pillow~=12.3.0",
     "pymemcache==4.0.0",
     "pytest~=9.1.1",
