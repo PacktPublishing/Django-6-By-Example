@@ -8,7 +8,7 @@
       <div class="message {% if message.user == request.user %}me{% else %}other{% endif %}">
         <strong>{{ message.user.username }}</strong>
         <span class="date">
-          {{ message.sent_on|date:"Y.m.d H:i A" }}
+          {{ message.sent_on|date:"Y.m.d g:i A" }}
         </span>
         <br>
         {{ message.content }}
@@ -47,10 +47,19 @@
     const source = isMe ? 'me' : 'other';
     const name = isMe ? 'Me' : data.user;
 
-    chat.innerHTML += '<div class="message ' + source + '">' +
-                      '<strong>' + name + '</strong> ' +
-                      '<span class="date">' + datetime + '</span><br>' +
-                      data.message + '</div>';
+    const messageElement = document.createElement('div');
+    messageElement.className = 'message ' + source;
+
+    const nameElement = document.createElement('strong');
+    nameElement.textContent = name;
+
+    const dateElement = document.createElement('span');
+    dateElement.className = 'date';
+    dateElement.textContent = datetime;
+
+    messageElement.append(nameElement, ' ', dateElement,
+                          document.createElement('br'), data.message);
+    chat.appendChild(messageElement);
     chat.scrollTop = chat.scrollHeight;
   };
 
