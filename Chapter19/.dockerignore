@@ -1,0 +1,13 @@
+# Virtual environments
+**/.venv/
+
+# Byte-compiled files
+**/__pycache__/
+**/*.py[cod]
+
+# Local database
+**/*.sqlite3
+
+# Secrets
+**/.env
+
