@@ -5,10 +5,8 @@ services:
     restart: always
     volumes:
       - ./data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - .env
 
   cache:
     image: redis:8.0.0
@@ -23,11 +21,8 @@ services:
     restart: always
     volumes:
       - .:/code
-    environment:
-      - DJANGO_SETTINGS_MODULE=educa.settings.prod
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - .env
     depends_on:
       - db
       - cache
@@ -51,11 +46,8 @@ services:
     restart: always
     volumes:
       - .:/code
-    environment:
-      - DJANGO_SETTINGS_MODULE=educa.settings.prod
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+    env_file:
+      - .env
     depends_on:
       - db
       - cache
