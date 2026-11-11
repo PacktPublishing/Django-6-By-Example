@@ -10,7 +10,7 @@ dependencies = [
     "django-embed-video==1.4.10",
     "django-redisboard==9.0.0",
     "djangorestframework==3.18.1",
-    "pillow~=12.3.0",
+    "pillow~=13.0.0",
     "pymemcache==4.0.0",
     "redis==8.0.0",
     "requests==2.34.2",
