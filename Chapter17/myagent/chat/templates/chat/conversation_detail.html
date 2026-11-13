@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ conversation.title }} · Tea Shop Assistant{% endblock %}
+
+{% block content %}
+  {% partialdef title inline %}
+    <h1 id="conversation-title"{% if request.htmx %} hx-swap-oob="true"{% endif %}>{{ conversation.title }}</h1>
+  {% endpartialdef %}
+
+  <div id="messages" class="messages">
+    {% for message in chat_messages %}
+      {% partial message %}
+    {% empty %}
+      <p class="empty">Ask what we have, or for a recommendation: "something fruity without caffeine", "a gift under €30"…</p>
+    {% endfor %}
+  </div>
+
+  {% partial composer %}
+{% endblock %}
+
+{% partialdef message %}
+  <article class="message {{ message.role }}">
+    <p class="role">{{ message.get_role_display }}</p>
+    <div class="text">{{ message.text|linebreaks }}</div>
+  </article>
+{% endpartialdef %}
+
+{% partialdef composer %}
+  <form id="composer" class="composer" method="post"
+        action="{% url 'chat:message_create' conversation.pk %}"
+        hx-post="{% url 'chat:message_create' conversation.pk %}"
+        hx-target="#messages" hx-swap="beforeend show:window:bottom"
+        hx-disabled-elt="find button"{% if request.htmx %} hx-swap-oob="true"{% endif %}>
+    {% csrf_token %}
+    <label class="visually-hidden" for="{{ form.text.id_for_label }}">{{ form.text.label }}</label>
+    {{ form.text }}
+    {{ form.text.errors }}
+    <div class="actions">
+      <span class="htmx-indicator">The assistant is writing…</span>
+      <button class="button" type="submit">Send</button>
+    </div>
+  </form>
+{% endpartialdef %}
+
+{% partialdef exchange %}
+  {% with message=user_message %}{% partial message %}{% endwith %}
+  {% if reply %}
+    {% with message=reply %}{% partial message %}{% endwith %}
+  {% else %}
+    <p class="alert" role="alert">The assistant could not answer. Send your message again in a moment.</p>
+  {% endif %}
+  {% partial composer %}
+  {% partial title %}
+{% endpartialdef %}

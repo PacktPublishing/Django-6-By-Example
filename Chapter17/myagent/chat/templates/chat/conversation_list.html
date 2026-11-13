@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Conversations · Tea Shop Assistant{% endblock %}
+
+{% block content %}
+  <div class="page-head">
+    <h1>Conversations</h1>
+    <form method="post" action="{% url 'chat:conversation_create' %}">
+      {% csrf_token %}
+      <button class="button" type="submit">New conversation</button>
+    </form>
+  </div>
+
+  {% if conversations %}
+    <ul class="conversation-list">
+      {% for conversation in conversations %}
+        <li>
+          <a href="{{ conversation.get_absolute_url }}">{{ conversation.title }}</a>
+          <time datetime="{{ conversation.updated_at|date:'c' }}">{{ conversation.updated_at|timesince }} ago</time>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty">No conversations yet. Start one with the button above.</p>
+  {% endif %}
+{% endblock %}

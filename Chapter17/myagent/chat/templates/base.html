@@ -1,0 +1,26 @@
+{% load static django_htmx %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Tea Shop Assistant{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% htmx_script %}
+</head>
+<body hx-headers='{"x-csrftoken": "{{ csrf_token }}"}'>
+  <header class="topbar">
+    <a class="brand" href="{% url 'chat:conversation_list' %}">Tea Shop Assistant</a>
+    {% if user.is_authenticated %}
+      <form class="account" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <span>{{ user.get_username }}</span>
+        <button class="button-link" type="submit">Log out</button>
+      </form>
+    {% endif %}
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

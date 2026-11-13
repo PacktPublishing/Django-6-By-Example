@@ -1,0 +1,6 @@
+asgiref~=3.11.1
+Django~=6.0.8
+sqlparse==0.6.0
+python-decouple==3.8
+django-htmx==1.29.0
+google-genai==2.33.0
