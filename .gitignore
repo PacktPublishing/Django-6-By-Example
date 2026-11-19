@@ -1,5 +1,6 @@
 .DS_Store
 data/
+!Chapter17/myagent/shop/data/
 .env
 
 # Byte-compiled / optimized / DLL files

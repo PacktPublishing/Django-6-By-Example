@@ -121,6 +121,8 @@ STATIC_URL = 'static/'
 
 AUTH_USER_MODEL = "chat.User"
 
+TEA_SHOP_CATALOG = BASE_DIR / "shop" / "data" / "products.json"
+
 GEMINI_API_KEY = config("GEMINI_API_KEY")
 GEMINI_MODEL = config("GEMINI_MODEL", "gemini-3.8-flash")
 ASSISTANT_SYSTEM_PROMPT = config(
