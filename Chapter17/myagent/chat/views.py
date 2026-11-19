@@ -67,17 +67,23 @@ def message_create(request, pk):
         return render_detail(request, conversation, form)
 
     text = form.cleaned_data["text"]
-    if not conversation.messages.exists():
-        conversation.title = Truncator(text).chars(60)
-    user_message = conversation.messages.create(role=Message.Role.USER, text=text)
-
+    # Saved only once the assistant has answered, so a failed call leaves no unanswered message.
+    user_message = Message(conversation=conversation, role=Message.Role.USER, text=text)
+    history = [*conversation.messages.all(), user_message]
     try:
-        reply_text = generate_reply(conversation.messages.all())
+        reply_text = generate_reply(history)
     except errors.APIError:
         logger.exception("The assistant failed to answer in conversation %s", conversation.pk)
-        reply = None
-    else:
-        reply = conversation.messages.create(role=Message.Role.MODEL, text=reply_text)
+        form.add_error(None, "The assistant could not answer. Send your message again in a moment.")
+        if request.htmx:
+            return render(request, f"{DETAIL_TEMPLATE}#composer", {"conversation": conversation, "form": form})
+        return render_detail(request, conversation, form)
+
+    reply = Message(conversation=conversation, role=Message.Role.MODEL, text=reply_text)
+    # One INSERT for both, so the question is never saved without its answer.
+    Message.objects.bulk_create([user_message, reply])
+    if len(history) == 1:
+        conversation.title = Truncator(text).chars(60)
     conversation.save(update_fields=["title", "updated_at"])
 
     if not request.htmx:

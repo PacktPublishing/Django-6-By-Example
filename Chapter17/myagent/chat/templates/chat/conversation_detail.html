@@ -33,6 +33,7 @@
         hx-disabled-elt="find button"{% if request.htmx %} hx-swap-oob="true"{% endif %}>
     {% csrf_token %}
     <label class="visually-hidden" for="{{ form.text.id_for_label }}">{{ form.text.label }}</label>
+    {% if form.non_field_errors %}<div role="alert">{{ form.non_field_errors }}</div>{% endif %}
     {{ form.text }}
     {{ form.text.errors }}
     <div class="actions">
@@ -44,11 +45,7 @@
 
 {% partialdef exchange %}
   {% with message=user_message %}{% partial message %}{% endwith %}
-  {% if reply %}
-    {% with message=reply %}{% partial message %}{% endwith %}
-  {% else %}
-    <p class="alert" role="alert">The assistant could not answer. Send your message again in a moment.</p>
-  {% endif %}
+  {% with message=reply %}{% partial message %}{% endwith %}
   {% partial composer %}
   {% partial title %}
 {% endpartialdef %}
