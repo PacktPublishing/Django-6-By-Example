@@ -22,7 +22,7 @@ dependencies = [
     "psycopg==3.3.6",
     "uwsgi==2.0.31",
     "python-decouple==3.8",
-    "setuptools==84.0.0",
+    "setuptools==84.1.0",
 ]
 
 [tool.ruff.format]
