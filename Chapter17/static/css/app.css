@@ -1,0 +1,278 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --text: #1c2230;
+  --muted: #5f6878;
+  --border: #d9dde4;
+  --accent: #2f5bd3;
+  --accent-text: #ffffff;
+  --user-bg: #e8eefc;
+  --danger: #b42318;
+  --radius: 10px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151b;
+    --surface: #1b2029;
+    --text: #e6e9ef;
+    --muted: #9aa3b2;
+    --border: #2f3644;
+    --accent: #7c9cf5;
+    --accent-text: #0e1220;
+    --user-bg: #222c45;
+    --danger: #f07167;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.55 var(--font);
+}
+
+a {
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.topbar .account {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--muted);
+}
+
+.container {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.auth {
+  max-width: 24rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stack,
+.stack > div {
+  display: grid;
+  gap: 0.75rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.button {
+  padding: 0.55rem 1.1rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.button-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.conversation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.conversation-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  padding: 0.85rem 1rem;
+}
+
+.conversation-list li + li {
+  border-top: 1px solid var(--border);
+}
+
+.conversation-list a {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.conversation-list time {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.messages {
+  display: grid;
+  gap: 1rem;
+}
+
+.message {
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.message.user {
+  background: var(--user-bg);
+  border-color: transparent;
+}
+
+.message .role {
+  margin: 0 0 0.25rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.message .text {
+  overflow-wrap: anywhere;
+}
+
+.message .text > :first-child {
+  margin-top: 0;
+}
+
+.message .text > :last-child {
+  margin-bottom: 0;
+}
+
+.alert {
+  margin: 0;
+  color: var(--danger);
+}
+
+.composer {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.composer .errorlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--danger);
+}
+
+.composer .actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* htmx toggles .htmx-request on the form while a request is in flight. */
+.htmx-indicator {
+  color: var(--muted);
+  visibility: hidden;
+}
+
+.htmx-request .htmx-indicator {
+  visibility: visible;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
