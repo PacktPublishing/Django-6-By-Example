@@ -9,7 +9,7 @@ services:
       - .env
 
   cache:
-    image: redis:8.0.0
+    image: redis:8.6.4
     restart: always
     volumes:
       - ./data/cache:/data
